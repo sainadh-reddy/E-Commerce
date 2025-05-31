@@ -3,8 +3,8 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #000;
-}
-
+} 
+/* Header */
 nav {
     display: flex;
     justify-content: space-between;
@@ -50,7 +50,7 @@ nav {
     position: absolute;
     border-radius: 5px;
     top: 100%;
-    left: 50%;
+    left: 100%;
     transform: translateX(-100%);
     border: 1px solid black;
     background-color: #474545;
@@ -68,7 +68,7 @@ nav {
     color: white;
     border-radius: 5px;
     top: 120%;
-    left: 50%;
+    left: 100%;
     transform: translateX(-100%);
     font-size: small;
     padding: 5px 20px;
@@ -96,4 +96,130 @@ nav {
 
 .profile-icon:hover .profile-card{
     display: block;
+}
+
+/* Header ends here */
+
+.form {
+    background-color: #222;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    margin-top: 60px;
+    box-sizing: border-box;
+}
+
+/* Hide both initially, show one with :target */
+.form{
+    /* display: none; */
+    margin: 0 auto;
+}
+
+#signup:target,
+#signin:target {
+    display: block;
+}
+
+/* If no anchor is targeted, show login by default */
+.form>.signin:first-of-type {
+    display: block;
+}
+
+.signin h3,
+.signup h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.signin p,
+.signup p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.signin a,
+.signup a {
+    color: #fb4f24;
+    text-decoration: none;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 10px 0;
+    border: 1px solid white;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #222;
+    color: white;
+    box-sizing: border-box;
+}
+
+.signin-btn,
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    background-color: #fb4f24;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.signin-btn:hover,
+.signup-btn:hover {
+    opacity: 0.9;
+}
+
+.seperator {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.seperator span {
+    margin: 0 10px;
+}
+
+.seperator::before,
+.seperator::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+}
+
+.social {
+    width: 100px;
+    padding: 10px;
+    margin: 10px 5px 0 5px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.social:hover {
+    opacity: 0.9;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.google {
+    background-color: #db4437;
+}
+
+.twitter {
+    background-color: #1da1f2;
 }

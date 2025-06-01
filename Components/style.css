@@ -33,14 +33,8 @@ nav {
     transition: color 0.3s ease;
 }
 
-.search-icon{
-    position: relative;
-}
-
-.cart-icon{
-    position: relative;
-}
-
+.search-icon,
+.cart-icon,
 .profile-icon{
     position: relative;
 }
@@ -86,140 +80,80 @@ nav {
     font-size: small;
 }
 
-.search-icon:hover .tooltip{
-    display: block;
-}
-
-.cart-icon:hover .tooltip{
-    display: block;
-}
-
+.search-icon:hover .tooltip,
+.cart-icon:hover .tooltip,
 .profile-icon:hover .profile-card{
     display: block;
 }
 
 /* Header ends here */
 
-.form {
-    background-color: #222;
-    color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    width: 400px;
-    margin-top: 60px;
-    box-sizing: border-box;
+/* Tablet */
+@media (max-width: 769px){
+    nav{
+        height: 40px;
+        padding: 5px 20px;
+    }
+
+    nav .logo h2{
+        font-size: 20px;
+    }
+
+    .navbar a,
+    .navbar i {
+        font-size: 14px;
+    }
+
+    .navbar{
+        gap: 20px;
+    }
+
+    .tooltip{
+        font-size: x-small;
+    }
+
+    .profile-card{
+        width: 200px;
+        padding: 5px 10px;
+        font-size: x-small;
+    }
+    
+    .profile-card .signup-btn a {
+        font-size: x-small;   
+    }
 }
 
-/* Hide both initially, show one with :target */
-.form{
-    /* display: none; */
-    margin: 0 auto;
-}
+/* Mobile */
+@media (max-width: 426px) {
+    nav {
+            height: 30px;
+            padding: 5px 20px;
+        }
+    
+        nav .logo h2 {
+            font-size: 20px;
+        }
+    
+        .navbar a,
+        .navbar i {
+            font-size: 14px;
+        }
 
-#signup:target,
-#signin:target {
-    display: block;
-}
+        .navbar{
+            gap: 15px;
+        }
 
-/* If no anchor is targeted, show login by default */
-.form>.signin:first-of-type {
-    display: block;
-}
-
-.signin h3,
-.signup h3 {
-    margin-bottom: 10px;
-    font-size: 24px;
-}
-
-.signin p,
-.signup p {
-    font-size: 14px;
-    color: #ccc;
-    margin-bottom: 20px;
-}
-
-.signin a,
-.signup a {
-    color: #fb4f24;
-    text-decoration: none;
-}
-
-input {
-    width: 100%;
-    padding: 10px 12px;
-    margin: 10px 0;
-    border: 1px solid white;
-    border-radius: 6px;
-    font-size: 14px;
-    background-color: #222;
-    color: white;
-    box-sizing: border-box;
-}
-
-.signin-btn,
-.signup-btn {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0 20px 0;
-    background-color: #fb4f24;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.signin-btn:hover,
-.signup-btn:hover {
-    opacity: 0.9;
-}
-
-.seperator {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #aaa;
-    font-size: 14px;
-}
-
-.seperator span {
-    margin: 0 10px;
-}
-
-.seperator::before,
-.seperator::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: #ccc;
-}
-
-.social {
-    width: 100px;
-    padding: 10px;
-    margin: 10px 5px 0 5px;
-    border: none;
-    color: white;
-    font-size: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-.social:hover {
-    opacity: 0.9;
-}
-
-.facebook {
-    background-color: #3b5998;
-}
-
-.google {
-    background-color: #db4437;
-}
-
-.twitter {
-    background-color: #1da1f2;
+        .tooltip{
+            font-size: xx-small;
+        }
+    
+        .profile-card {
+            width: 150px;
+            padding: 2px 10px;
+            font-size: xx-small;
+        }
+    
+        .profile-card .signup-btn a {
+            font-size: xx-small;
+        }
 }

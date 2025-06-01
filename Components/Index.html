@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Tech-Shop</title>
 </head>
@@ -16,14 +17,16 @@
             <div class="navbar">
                 <div class="search-icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <p class="tooltip">Search</p>
+                    <span class="tooltip">Search</span>
                 </div>
+            
                 <div class="cart-icon">
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                    <p class="tooltip">cart</p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="tooltip">Cart</span>
                 </div>
+            
                 <div class="profile-icon">
-                    <a href=""><i class="fa-solid fa-user"></i></a>
+                    <i class="fa-solid fa-user"></i>
                     <div class="profile-card">
                         <h3>Hello!</h3>
                         <p>Access account and manage orders</p>
@@ -33,39 +36,69 @@
                     </div>
                 </div>
             </div>
+            
         </nav>
     </header>
-    <!-- <div class="form">
-        <div class="signin" id="signin">
-            <h3>Login</h3>
-            <p>New to Tech-Shop? <a href="#signup">Create an account</a></p>
-            <input type="text" placeholder="Username"><br>
-            <input type="password" placeholder="Password"><br>
-            <button class="signin-btn">Signin</button>
+
+    <section class="hero-section">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="hero-content">
+                        <div class="text-content">
+                            <h4>boAt Airdopes 131</h4>
+                            <p>Featherweight For <br> Comfort All-Day</p>
+                            <pre><span class="price"> ₹1,099 </span><strike>₹2,999</strike></pre>
+                            <button class="shop-btn">Shop Now</button>
+                        </div>
+                        <div class="image-content">
+                            <img src="/images/Products/boat131-3.png" alt="boAt Airdopes" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="hero-content">
+                        <div class="text-content">
+                            <h4>Sony WH-XB910N</h4>
+                            <p>Give Your Favourite<br> Music A Boost.</p>
+                            <pre><span class="price"> ₹13,489 </span><strike>₹19,990</strike></pre>
+                            <button class="shop-btn">Shop Now</button>
+                        </div>
+                        <div class="image-content">
+                            <img src="/images/Products/sonyXb910n-1.png" alt="Sony WH-XB910N" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="hero-content">
+                        <div class="text-content">
+                            <h4>JBL Live 660NC</h4>
+                            <p>Keep The Noise Out, Or<br> In. You Choose.</p>
+                            <pre><span class="price"> ₹9,999 </span><strike>₹14,999</strike></pre>
+                            <button class="shop-btn">Shop Now</button>
+                        </div>
+                        <div class="image-content">
+                            <img src="/images/Products/jbl660nc-1.png" alt="JBL Live 660NC" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="signup" id="signup">
-            <h3>Signup</h3>
-            <p>Already have an account? <a href="#signin">Login</a></p>
-            <input type="text" placeholder="Username"><br>
-            <input type="email" placeholder="Email"><br>
-            <input type="password" placeholder="Password"><br>
-            <input type="text" placeholder="Confirm Password"><br>
-            <button class="signup-btn">Signup</button>
-        </div>
-
-        <div class="seperator">
-            <span> or login with </span>
-        </div>
-
-        <div>
-            <button class="social facebook">Facebook</button>
-            <button class="social google">Google</button>
-            <button class="social twitter">Twitter</button>
-        </div>
-    </div> -->
-
-    
-
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

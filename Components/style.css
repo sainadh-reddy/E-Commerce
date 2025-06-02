@@ -572,6 +572,7 @@ nav {
 
 .advantages ul li {
     display: flex;
+    flex-grow: 1;
     align-items: center;
     gap: 15px;
     color: white;
@@ -599,14 +600,27 @@ nav {
 /* Responsive */
 @media (max-width: 768px) {
     .advantages ul {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .advantages ul li{
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .advantages ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .advantages ul li {
-        width: 90%;
-        max-width: 400px;
+        width: 100%;
     }
+
 }
 
 footer {
@@ -742,10 +756,17 @@ footer>div:last-of-type ul li i:hover {
 }
 
 /* Responsive Design */
+@media (max-width: 1025px) {
+    footer .details {
+        gap: 30px;
+        margin-left: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     footer .details {
-        flex-direction: column;
-        gap: 30px;
+        gap: 50px;
+        margin-left: 10px;
     }
 
     footer input[type="email"],
@@ -755,12 +776,17 @@ footer>div:last-of-type ul li i:hover {
     }
 
     footer>div:last-of-type {
-        flex-direction: column;
         gap: 12px;
-        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    footer>div:last-of-type{
+        display: flex;
+        flex-direction: column;
     }
 
-    footer>div:last-of-type ul {
-        justify-content: center;
+    footer>div:last-of-type p{
+        font-size: smaller;
     }
 }

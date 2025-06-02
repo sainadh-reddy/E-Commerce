@@ -1,4 +1,3 @@
-/* General Reset */
 body {
     margin: 0;
     padding: 0;
@@ -53,7 +52,7 @@ nav {
     position: absolute;
     border-radius: 5px;
     top: 120%;
-    right: 0;
+    left: 40px;
     transform: translateX(-100%);
     border: 1px solid black;
     background-color: #474545;
@@ -68,7 +67,7 @@ nav {
     display: none;
     width: 250px;
     position: absolute;
-    top: 100%;
+    top: 106%;
     right: 0;
     border: 1px solid black;
     background-color: #474545;
@@ -370,6 +369,9 @@ nav {
     75% {
             transform: translateX(-60%);
         }
+    100%{
+        transform: translateX(-80%);
+    }
 }
 
 /* Responsive for Tablets (≤ 1024px) */
@@ -475,7 +477,7 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.top-product:hover {
+.top-product img:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(255, 60, 60, 0.2);
 }

@@ -294,3 +294,250 @@ nav {
         font-size: 1rem;
     }
 }
+
+.featured-products {
+    margin: 30px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    padding: 0 20px;
+}
+
+.featured-products h4 {
+    color: white;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.product-cards {
+    display: flex;
+    gap: 30px;
+    padding: 20px 0;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.product-cards .card {
+    background-color: #000;
+    color: white;
+    width: 200px;
+    height: 260px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.product-cards .card img {
+    height: 100px;
+    object-fit: contain;
+}
+
+.product-cards .card h5 {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-cards .card p {
+    font-size: 16px;
+    margin-top: auto;
+}
+
+.product-cards .card span {
+    color: #888;
+    font-size: 14px;
+}
+
+@keyframes scroll {
+    0% {
+            transform: translateX(0);
+        }
+    
+    25% {
+            transform: translateX(-20%);
+        }
+    
+    50% {
+            transform: translateX(-40%);
+        }
+    
+    75% {
+            transform: translateX(-60%);
+        }
+}
+
+/* Responsive for Tablets (≤ 1024px) */
+@media (max-width: 800px) {
+
+    .product-cards .card {
+        width: 160px;
+        height: 230px;
+    }
+
+    .product-cards .card img {
+        height: 90px;
+    }
+
+    .product-cards .card h5 {
+        font-size: 15px;
+    }
+
+    .product-cards .card p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 450px) {
+    .product-cards{
+        gap: 10px;
+    }
+
+    .product-cards .card img{
+        height: 70px;
+    }
+
+    .featured-products h4{
+        font-size: large;
+    }
+}
+
+.top-products {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.top-products h4 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+/* Filter Buttons */
+.top-products ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.top-products ul li:first-child{
+    background-color: #ff3c3c;
+
+}
+
+.top-products ul li {
+    background-color: #222;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.top-products ul li:hover,
+.top-products ul li.active {
+    background-color: #ff3c3c;
+    color: white;
+}
+
+/* Cards Container */
+.top-products-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Individual Product Card */
+.top-product {
+    width: 220px;
+    color: white;
+    border: 1px solid #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 60, 60, 0.2);
+}
+
+/* Product Image */
+.top-product img {
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* Product Text */
+.top-product h6 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.top-product p {
+    font-size: 13px;
+    color: #a09e9e;
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* Price Styling */
+.top-product .price {
+    color: white;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.top-product .price span {
+    color: #a09e9e;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+/* Button */
+.top-product .add-btn {
+    width: 100%;
+    padding: 8px;
+    background-color: #ff3c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.top-product .add-btn:hover {
+    background-color: #e23232;
+}
+
+.top-product.browse-card{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.top-product.browse-card p{
+    font-size: x-large;
+    color: whitesmoke;
+}

@@ -190,12 +190,17 @@ nav {
     padding: 5px;
 }
 
-.product-imgs>img:first-child{
+.product-imgs img:hover{
+    transform: translateY(-2px);
     border: 2px solid white;
 }
 
 .main-product img{
     height: 480px;
+}
+
+.main-product img:hover{
+    transform: translateY(-2px);
 }
 
 .desc{

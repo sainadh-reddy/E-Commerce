@@ -78,7 +78,7 @@ nav {
     z-index: 20;
 }
 
-.profile-card .signup-btn {
+.profile-card .log-btn {
     background-color: #474545;
     border: 1px solid whitesmoke;
     border-radius: 5px;
@@ -87,7 +87,11 @@ nav {
     cursor: pointer;
 }
 
-.profile-card .signup-btn a {
+.profile-card .log-btn:hover{
+    background-color: rgb(219, 32, 32);
+}
+
+.profile-card .log-btn a {
     font-size: small;
     color: white;
     text-decoration: none;
@@ -810,3 +814,185 @@ footer>div:last-of-type ul li i:hover {
         font-size: smaller;
     }
 }
+
+/* Form Styles strats here */
+.signin,
+.signup {
+    max-width: 400px;
+    padding: 30px 40px;
+    background-color: #222;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: white;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 33%;
+}
+
+#signin:target,
+#signup:target {
+    display: block;
+}
+
+.signin h3,
+.signup h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #fb4f24;
+}
+
+.signin p,
+.signup p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.signin a,
+.signup a {
+    color: #fb4f24;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signin a:hover,
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.signin input,
+.signup input {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 10px 0;
+    border: 1px solid white;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+}
+
+.signin-btn,
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #fb4f24;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signin-btn:hover,
+.signup-btn:hover {
+    background-color: #e1451f;
+}
+
+.seperator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.seperator::before,
+.seperator::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #555;
+    margin: 0 10px;
+}
+
+.social {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 90px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: opacity 0.3s;
+}
+
+.social:hover {
+    opacity: 0.9;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.google {
+    background-color: #db4437;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #fb4f24;
+}
+
+/* Responsive Behavior */
+@media (max-width: 800px) {
+
+    .signin,
+    .signup {
+        padding: 20px 15px;
+        left: 30%;
+    }
+
+    .signin input,
+    .signup input{
+        padding: 5px;
+    }
+
+    .signin-btn,
+    .signup-btn{
+        padding: 5px;
+    }
+
+    .social {
+        width: 30%;
+        padding: 5px;
+        margin: 2px;
+    }
+}
+
+@media (max-width:450px) {
+    .signin,
+    .signup{
+        left: 15%;
+    }
+    
+}
+
+@media (max-width:325px) {
+    .signin,
+    .signup {
+        left: 10%;
+    }
+
+}
+
+/* Form styles end here */
